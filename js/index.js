@@ -160,8 +160,9 @@
     //     });
     // })
 
-    let box=document.querySelectorAll(".side_bian1");
+    let box=document.querySelectorAll(".side_geren");
     let bottom=document.querySelectorAll(".side_bottom");
+    //let big=document.querySelectorAll("side_bian1");
     box.forEach(function(ele,index){
         ele.onmouseenter=function(){
             bottom[index].style.opacity="1";
@@ -170,20 +171,35 @@
         }
         ele.onmouseleave=function(){
             bottom[index].style.opacity="0";
-            bottom[index].style.left="-150px";
+            bottom[index].style.left="-130px";
         }
     })
-    // let box1=document.querySelector(".side_bian2");
-    // let bottom1=document.querySelector(".side_bottom1");
-    //     box1.onmouseenter=function(){
-    //         bottom1.style.opacity="1";
-    //         bottom1.style.left="-90px";
-    //         bottom1.style.transition="all 0.5s";
-    //     }
-    //     box1.onmouseleave=function(){
-    //         bottom1.style.opacity="0";
-    //         bottom1.style.left="-150px";
-    //     }
+    let box3=document.querySelectorAll(".side_yijian");
+    let bottom3=document.querySelectorAll(".side_bottom2");
+    box3.forEach(function(ele,index){
+        ele.onmouseenter=function(){
+            bottom3[index].style.opacity="1";
+            bottom3[index].style.left="-90px";
+            bottom3[index].style.transition="all 0.5s";
+        }
+        ele.onmouseleave=function(){
+            bottom3[index].style.opacity="0";
+            bottom3[index].style.left="-130px";
+        }
+    })
+    let box1=document.querySelectorAll(".side_geren2");
+    let bottom1=document.querySelectorAll(".side_bottom1");
+    box1.forEach(function(ele,index){
+        ele.onmouseenter=function(){
+            bottom1[index].style.opacity="1";
+            bottom1[index].style.left="-90px";
+            bottom1[index].style.transition="all 0.5s";
+        }
+        ele.onmouseleave=function(){
+            bottom1[index].style.opacity="0";
+            bottom1[index].style.left="-130px";
+        }
+    })
     let totop=document.querySelector(".side_bian2");
     totop.onclick=function(){
         let st=document.documentElement.scrollTop;
@@ -196,4 +212,15 @@
             document.documentElement.scrollTop=st;
         },25);
     }
+
+    let box2=document.querySelectorAll(".side_bian3");
+    let bottom2=document.querySelectorAll(".side_erwei");
+    box2.forEach(function(ele,index){
+        ele.onmouseenter=function(){
+            bottom2[index].style.display="block";
+        }
+        ele.onmouseleave=function(){
+            bottom2[index].style.display="none";
+        }
+    })
 }

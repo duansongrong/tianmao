@@ -761,6 +761,7 @@ html{
     width: 100%;
     margin-top: 57px;
     position: relative;
+    background: #fff;
 }
 .market_pro_content{
     height: 244px;
@@ -779,11 +780,20 @@ html{
     position: absolute;
     left:0;
     bottom: 52px;
-    z-index: 999;
+    z-index: 9;
 }
 .market_biao img{
     width: 100%;
     height: 100%;
+}
+.bianqian_mask{
+    width: 250px;
+    height: 100%;
+    position: absolute;
+    left:0;
+    bottom: 0;
+    /*z-index: 99;*/
+    background: #fff;
 }
 .market_biao .shi{
     width: 23px;
@@ -1189,27 +1199,33 @@ html{
     background: #000000;
     z-index: 9999999;
 }
-.side_geren{
+.side_geren,.side_geren3,.side_geren2{
     width: 35px;
     height: 35px;
     margin-top: 178px;
     position: relative;
     background-color: #000;
-}
-.side_geren1{
-    width: 35px;
-    height: 35px;
-    background-color: #000;
-    margin-top: 8px;
-    position: relative;
     z-index: 999;
 }
+.side_geren1,.side_geren3,.side_geren2{
+    margin-top: 8px;
+}
 .side_gerenimg{
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: -5px;
+    bottom: 0;
+    margin: auto;
+    z-index: 9999;
+}
+.side_gerenimg1{
     width: 16px;
     height: 16px;
     position: absolute;
     background: url('../img/sidebaricon.png');
-    background-position: -36px -7px;
     top: 0;
     left: 0;
     right: 0;
@@ -1220,7 +1236,7 @@ html{
     background-color: #FF0036;
     cursor: pointer;
 }
-.side_bian1:hover .side_geren1{
+.side_geren1:hover,.side_geren3:hover,.side_geren2:hover{
     background-color: #FF0036;
     cursor: pointer;
 }
@@ -1304,32 +1320,88 @@ html{
     transition: all .5s;
     z-index: 999;
 }
-.side_bottom{
+.side_bottom,.side_bottom2, .side_bottom1{
     width: 90px;
     height: 35px;
     background: #4B4B4B;
     position: absolute;
     top:0;
-    left:-150px;
+    left:-130px;
     text-align: center;
     line-height: 35px;
     color:#fff;
     font-size: 11px;
     /*display: none;*/
     opacity: 0;
+    z-index: 999999;
 }
-.side_bottom1{
-    width: 90px;
+.jiao{
+    width:30px;
+    height: 30px;
+    font-size: 24px;
+    color:#4B4B4B;
+    position:absolute;
+    top:50%;
+    margin-top: -15px;
+    right:-15px;
+}
+.side_bian2{
+    width: 35px;
     height: 35px;
-    background: #4B4B4B;
+    position: relative;
+    transition: all .5s;
+    z-index: 999;
+}
+.side_bian3{
+    width: 35px;
+    height: 35px;
+    position: relative;
+    transition: all .5s;
+    z-index: 999;
+}
+.side_erwei{
+    width: 154px;
+    height: 181px;
+    background: #FF0039;
+    border-radius: 10px;
+    position: absolute;
+    bottom:-10px;
+    left:-154px;
+    display: none;
+}
+.side_erwei_item{
+    width: 137px;
+    height: 160px;
+    background: #ED0035;
+    border:1px solid #DE0028;
+    border-radius: 10px;
     position: absolute;
     top:0;
-    left:-150px;
-    text-align: center;
-    line-height: 35px;
-    color:#fff;
-    font-size: 11px;
-    opacity: 0;
+    left:0;
+    bottom:0;
+    right:0;
+    margin:auto;
+}
+.side_erwei_img{
+    width: 100px;
+    height: 100px;
+    display: block;
+    margin:0 auto;
+    margin-top: 10px;
+}
+.side_erwei_word{
+    width: 135px;
+    height: 45px;
+    display: block;
+    margin:0 auto;
+    margin-top: 5px;
+}
+.side_erwei_tou{
+    width: 47px;
+    height: 38px;
+    position: absolute;
+    top:-40px;
+    left:5px;
 }
 .side_bian1:hover .side_bian1_bottom{
     background-color:#FF0036;
