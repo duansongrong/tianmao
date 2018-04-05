@@ -75,62 +75,60 @@
 
 //顶部
 {
-    let xianshi=document.querySelector(".topbar");
-    let leftBar=document.querySelector(".floatbar");
-    window.onscroll=function(){
-        let st=document.documentElement.scrollTop;
-        if(st>750){
-            leftBar.style.display="block";
-        }else{
-            leftBar.style.display="none";
-        }
-
-        if(st>800){
-            xianshi.style.display="block";
-        }else{
-            xianshi.style.display="none";
-        }
-    }
+    // let xianshi=document.querySelector(".topbar");
+    // let leftBar=document.querySelector(".floatbar");
+    // window.onscroll=function(){
+    //     let st=document.documentElement.scrollTop;
+    //     if(st>750){
+    //         leftBar.style.display="block";
+    //     }else{
+    //         leftBar.style.display="none";
+    //     }
+    //
+    //     if(st>800){
+    //         xianshi.style.display="block";
+    //     }else{
+    //         xianshi.style.display="none";
+    //     }
+    // }
 
 }
 //左侧浮动
 {
-    let tips=document.querySelectorAll(".floatbar_item9");
-    let containers=document.querySelectorAll(".container");
-    // let flag=true;
-    tips.forEach(function(ele,index){
-        ele.onclick=function(){
-            // flag=false;
-            let ot=containers[index].offsetTop-50;
-            document.documentElement.scrollTop=ot;
-            let now=document.documentElement.scrollTop;
-            let speed=(ot-now)/8;
-            let time=0;
-            let t=setInterval(function(){
-                time+=25;
-                now+=speed;
-                if(time===200){
-                    clearInterval(t);
-                    // flag=true;
-                }
-                document.documentElement.scrollTop=now;
-            },25)
+    $(".float_totop").click(function(){
+        $("html,body").animate({scrollTop:0})
+    });
+    $(window).scroll(function(){
+        let st=$(window).scrollTop();
+        if(st>750){
+            $(".floatbar").show();
+        }else{
+            $(".floatbar").hide();
+        }
+        if(st>800){
+            $(".topbar").show();
+        }else{
+            $(".topbar").hide();
         }
     });
-    window.addEventListener("scroll",function(){
-        // if(flag){
-        let st=document.documentElement.scrollTop;
-        for(i=0;i<containers.length;i++){
-            if(st>containers[i].offsetTop-530){
-                for(let j=0;j<tips.length;j++){
-                    tips[j].classList.remove("active");
-                }
-                tips[i].classList.add("active");
-
+    $(".floatbar_item9").click(function(){
+        let index=$(this).index(".floatbar_item9");
+        let ot=$(".container").eq(index).offset().top-150;
+        $("html,body").animate({scrollTop:ot},200);
+    });
+    let arr=["#64c333","#ff0036","#ea5f8d","#0aa6e8","#64c333","#f15453","#19c8a9","#ff0036"];
+    $(".floatbar_item9").mouseenter(function(){
+        let index=$(this).index(".floatbar_item9");
+        $(".floatbar_item9").css("background","rgba(98,98,98,1)").eq(index).css("background",arr[index]);
+    });
+    $(window).scroll(function(){
+        let st=$(window).scrollTop();
+        $(".container").each(function(index,ele){
+            if(st>=$(this).offset().top-150){
+                $(".floatbar_item9").css("background","rgba(98,98,98,1)").eq(index).css("background",arr[index]);
             }
-        }
-        // }
-    });
+        })
+    })
     let totop=document.querySelector(".float_totop");
     totop.onclick=function(){
         let st=document.documentElement.scrollTop;
