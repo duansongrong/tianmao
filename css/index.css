@@ -1539,30 +1539,33 @@ html{
     padding-top: 12px;
     background:  #FF0036;
 }
-.floatbar_item2{
-    background: #ABABAB;
-}
-.floatbar_item:hover{
+.floatbar_item9:hover{
     cursor: pointer;
 }
-.floatbar_item3:hover{
-    background: #64C333;
-}
-.floatbar_item4:hover{
-    background: #000;
-}
-.floatbar_item5:hover{
-    background: #E54077;
-}
-.floatbar_item6:hover{
-    background:#588CF0;
-}
-.floatbar_item7:hover{
-    background: #F15453;
-}
-.floatbar_item8:hover{
-    background: #40C8B2;;
-}
-.floatbar_item9.active{
-    background:#F15453;
-}
+/*.floatbar_item2{*/
+    /*background: #ABABAB;*/
+/*}*/
+/*.floatbar_item:hover{*/
+    /*cursor: pointer;*/
+/*}*/
+/*.floatbar_item3:hover{*/
+    /*background: #64C333;*/
+/*}*/
+/*.floatbar_item4:hover{*/
+    /*background: #000;*/
+/*}*/
+/*.floatbar_item5:hover{*/
+    /*background: #E54077;*/
+/*}*/
+/*.floatbar_item6:hover{*/
+    /*background:#588CF0;*/
+/*}*/
+/*.floatbar_item7:hover{*/
+    /*background: #F15453;*/
+/*}*/
+/*.floatbar_item8:hover{*/
+    /*background: #40C8B2;;*/
+/*}*/
+/*.floatbar_item9.active{*/
+    /*background:#F15453;*/
+/*}*/
